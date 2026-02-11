@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIC · 招亲主页</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 顶部 -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">❤</div>
+      <div>
+        <h1>RIC 的招亲网站</h1>
+        <p class="tagline">照片可互动点击</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#about">基本信息</a>
+      <a href="#gallery">照片</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 头图/简介 -->
+    <section class="hero">
+      <div class="hero-card">
+        <h2>你好，我是 RIC</h2>
+        <p class="hero-text">
+          这是一个小骚🐱<br />
+          如果你愿意认识我，欢迎从照片开始点点看～
+        </p>
+
+        <div class="chips" aria-label="个人标签">
+          <span class="chip">22 岁</span>
+          <span class="chip">NYU 经济学专业</span>
+          <span class="chip">190cm 黑皮白袜体育生</span>
+          <span class="chip">喜欢：拍照 / 城市漫步 / 咖啡</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">我想联系</a>
+          <button class="btn ghost" id="btnRandom">随机看一张照片</button>
+        </div>
+      </div>
+
+      <div class="hero-image" role="img" aria-label="封面照片预览">
+        <img src="images/a01.jpg" alt="RIC 照片 1" />
+        <div class="hero-badge">
+          <span>点击下面照片可放大</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 基本信息 -->
+    <section id="about" class="section">
+      <h3 class="section-title">基本信息</h3>
+      <div class="grid2">
+        <article class="card">
+          <h4>个人档案</h4>
+          <ul class="info">
+            <li><span>年龄</span><b>22</b></li>
+            <li><span>学校/专业</span><b>NYU · 经济学</b></li>
+            <li><span>身高</span><b>190 cm</b></li>
+            <li><span>关键词</span><b>认真 / 有边界感 / 好沟通</b></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h4>我希望的相处方式</h4>
+          <ul class="bullets">
+            <li>坦诚沟通：不冷战、不猜谜。</li>
+            <li>尊重彼此：给空间，也给回应。</li>
+            <li>一起变好：学习、运动、旅行都可以。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 照片墙 -->
+    <section id="gallery" class="section">
+      <div class="section-head">
+        <h3 class="section-title">照片（可点击互动）</h3>
+        <div class="toolbar">
+          <button class="btn small" id="btnShuffle">打乱顺序</button>
+          <button class="btn small ghost" id="btnClearLikes">清空点赞</button>
+        </div>
+      </div>
+
+      <div class="gallery" id="galleryGrid" aria-label="照片列表">
+        <button class="photo" data-src="images/a01.jpg" data-caption="照片 01">
+          <img src="images/a01.jpg" alt="RIC 照片 01" />
+          <span class="photo-meta">
+            <span class="caption">照片 01</span>
+            <span class="like" aria-label="点赞数">♡ <em>0</em></span>
+          </span>
+        </button>
+
+        <button class="photo" data-src="images/a02.jpg" data-caption="照片 02">
+          <img src="images/a02.jpg" alt="RIC 照片 02" />
+          <span class="photo-meta">
+            <span class="caption">照片 02</span>
+            <span class="like">♡ <em>0</em></span>
+          </span>
+        </button>
+
+        <button class="photo" data-src="images/a03.jpg" data-caption="照片 03">
+          <img src="images/a03.jpg" alt="RIC 照片 03" />
+          <span class="photo-meta">
+            <span class="caption">照片 03</span>
+            <span class="like">♡ <em>0</em></span>
+          </span>
+        </button>
+
+        <button class="photo" data-src="images/a04.jpg" data-caption="照片 04">
+          <img src="images/a04.jpg" alt="RIC 照片 04" />
+          <span class="photo-meta">
+            <span class="caption">照片 04</span>
+            <span class="like">♡ <em>0</em></span>
+          </span>
+        </button>
+
+        <button class="photo" data-src="images/a05.jpg" data-caption="照片 05">
+          <img src="images/a05.jpg" alt="RIC 照片 05" />
+          <span class="photo-meta">
+            <span class="caption">照片 05</span>
+            <span class="like">♡ <em>0</em></span>
+          </span>
+        </button>
+
+        <button class="photo" data-src="images/a06.jpg" data-caption="照片 06">
+          <img src="images/a06.jpg" alt="RIC 照片 06" />
+          <span class="photo-meta">
+            <span class="caption">照片 06</span>
+            <span class="like">♡ <em>0</em></span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 联系 -->
+    <section id="contact" class="section">
+      <h3 class="section-title">联系我</h3>
+      <div class="grid2">
+<article class="card">
+  <h4>留言给我</h4>
+
+  <form class="form" action="https://formspree.io/f/mojnjwyz" method="POST">
+    <label>
+      你的称呼
+      <input type="text" name="name" placeholder="例如：小林" required />
+    </label>
+
+    <label>
+      你的邮箱（方便我回复你💗）
+      <input type="email" name="email" placeholder="name@example.com" required />
+    </label>
+
+    <label>
+      你想说的话
+      <textarea name="message" rows="5" placeholder="随便聊聊：你喜欢什么样的约会？" required></textarea>
+    </label>
+
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <input type="hidden" name="_subject" value="RIC 招亲网站有新留言 ❤" />
+
+    <input type="hidden" name="_next" value="./index.html#contact" />
+
+    <button class="btn primary" type="submit">发送</button>
+
+  </form>
+</article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> RIC · Pink Theme · Made with ❤</p>
+  </footer>
+
+  <!-- 弹窗（点击照片打开） -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="照片预览">
+      <button class="icon-btn close" id="modalClose" aria-label="关闭">×</button>
+
+      <div class="modal-body">
+        <button class="icon-btn nav prev" id="modalPrev" aria-label="上一张">‹</button>
+
+        <figure class="modal-figure">
+          <img id="modalImg" src="" alt="放大照片" />
+          <figcaption id="modalCaption"></figcaption>
+        </figure>
+
+        <button class="icon-btn nav next" id="modalNext" aria-label="下一张">›</button>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn small" id="modalLike">点赞 ♡</button>
+        <span class="soft" id="modalHint">提示：键盘也可以 ← → 切换，Esc 关闭</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //小工具
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+    // 年份
+    $("#year").textContent = new Date().getFullYear();
+
+    //点赞数据本地存储
+    const STORAGE_KEY = "ric_likes_v1";
+    let likes = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); // { "images/a01.jpg": 3, ... }
+
+    function saveLikes() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(likes));
+    }
+
+    function renderLikes() {
+      $$(".photo").forEach((btn) => {
+        const src = btn.dataset.src;
+        const count = likes[src] || 0;
+        btn.querySelector(".like em").textContent = String(count);
+        btn.classList.toggle("liked", count > 0);
+      });
+    }
+    renderLikes();
+
+    //弹窗预览 + 左右切换
+    const photos = $$(".photo");
+    const modal = $("#modal");
+    const modalImg = $("#modalImg");
+    const modalCaption = $("#modalCaption");
+    const modalLikeBtn = $("#modalLike");
+
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      const btn = photos[currentIndex];
+      const src = btn.dataset.src;
+      const caption = btn.dataset.caption || "";
+
+      modalImg.src = src;
+      modalCaption.textContent = caption;
+
+      modal.classList.add("show");
+      modal.setAttribute("aria-hidden", "false");
+
+      //更新按钮文字
+      const count = likes[src] || 0;
+      modalLikeBtn.textContent = count > 0 ? `已点赞 ❤（${count}）` : `点赞 ♡（${count}）`;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.remove("show");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function step(delta) {
+      currentIndex = (currentIndex + delta + photos.length) % photos.length;
+      openModal(currentIndex);
+    }
+
+    photos.forEach((btn, i) => {
+      btn.addEventListener("click", () => openModal(i));
+      //双击也能直接点赞
+      btn.addEventListener("dblclick", (e) => {
+        e.preventDefault();
+        const src = btn.dataset.src;
+        likes[src] = (likes[src] || 0) + 1;
+        saveLikes();
+        renderLikes();
+      });
+    });
+
+    $("#modalClose").addEventListener("click", closeModal);
+    $("#modalBackdrop").addEventListener("click", closeModal);
+    $("#modalPrev").addEventListener("click", () => step(-1));
+    $("#modalNext").addEventListener("click", () => step(1));
+
+    // 弹窗点赞
+    modalLikeBtn.addEventListener("click", () => {
+      const src = photos[currentIndex].dataset.src;
+      likes[src] = (likes[src] || 0) + 1;
+      saveLikes();
+      renderLikes();
+      const count = likes[src] || 0;
+      modalLikeBtn.textContent = `已点赞 ❤（${count}）`;
+    });
+
+    // 键盘控制
+    window.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("show")) return;
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+
+    // ====== 工具栏功能 ======
+    $("#btnClearLikes").addEventListener("click", () => {
+      likes = {};
+      saveLikes();
+      renderLikes();
+      alert("已清空所有点赞");
+    });
+
+    $("#btnShuffle").addEventListener("click", () => {
+      const grid = $("#galleryGrid");
+      const items = $$(".photo");
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        grid.insertBefore(items[j], items[i]);
+      }
+      while (photos.length) photos.pop();
+      $$(".photo").forEach((x) => photos.push(x));
+    });
+
+    $("#btnRandom").addEventListener("click", () => {
+      const i = Math.floor(Math.random() * photos.length);
+      openModal(i);
+      document.querySelector("#gallery").scrollIntoView({ behavior: "smooth" });
+    });
+
+    $("#btnFakeSend").addEventListener("click", () => {
+      alert("演示版：已发送（其实没发）。想要真实发送我可以帮你接表单服务。");
+    });
+  </script>
+</body>
+</html>
+
